@@ -1,21 +1,29 @@
-import java.awt.Color;
-
-public class Autovehicul extends Sofer{
+public class Autovehicul {
     private final String marca;
-    private final Color color;
+    private final ColorNew color;
     private int vitezaCurenta;
     private final int vitezaMaxima;
     private static final int nrTrepteViteza = 6;
     private int treaptaCurenta;
     private static final String tip = "Diesel";
     public Rezervor rezervor;
-    public Autovehicul(String marca, Color color, int vitezaCurenta, int vitezaMaxima, int treaptaCurenta, String nume, String prenume, int varsta, int nrPermis, Rezervor rezervor){
-        super(nume, prenume, varsta, nrPermis);
+    public Sofer sofer;
+    public Autovehicul(){//constructor fara parametri
+        this.marca =("unknown");
+        this.color = null;
+        this.vitezaCurenta = 0;
+        this.vitezaMaxima = 0;
+        this.treaptaCurenta = 0;
+        this.sofer= null;
+        this.rezervor = null;
+    }
+    public Autovehicul(String marca, ColorNew color, int vitezaCurenta, int vitezaMaxima, int treaptaCurenta, Sofer sofer, Rezervor rezervor){
         this.marca = marca;
         this.color = color;
         this.vitezaCurenta = vitezaCurenta;
         this.vitezaMaxima = vitezaMaxima;
         this.treaptaCurenta = treaptaCurenta;
+        this.sofer = sofer;
         this.rezervor = rezervor;
     }
     public int getVitezaCurenta()
@@ -57,11 +65,9 @@ public class Autovehicul extends Sofer{
         this.treaptaCurenta = treaptaNoua;
     }
     public String toString(){
-        return "Marca: " + marca + ", tip: " + tip + ", color " + color + ", viteza curenta: " + vitezaCurenta
-        + ", viteza maxima: " + vitezaMaxima + ", nr trepte viteza: " + nrTrepteViteza + ", treapta curenta: " + treaptaCurenta + ", capacitate rezevor: " + rezervor.getCapacitateMaxima()
-                +", cantitate combustibil: " + rezervor.getCantitateCombustibil() + ", nivelul de umplere: " + rezervor.getNivelUmplere();
-    }
-    public String toStringSofer(){
-        return ("Sofer: " + nume + " " + prenume);
+        return "Marca: " + marca + ", tip: " + tip + ", culoare " + color + ", viteza curenta: " + vitezaCurenta
+        + ", viteza maxima: " + vitezaMaxima + ", nr trepte viteza: " + nrTrepteViteza + ", treapta curenta: " + treaptaCurenta + ", sofer: " +  sofer.getNume()
+        + " " + sofer.getPrenume() + ", capacitate rezevor: " + rezervor.getCapacitateMaxima()
+                +", cantitate combustibil: " + rezervor.getCantitateCombustibil() + ", nivelul de umplere: " + rezervor.getNivelUmplere() + "\n";
     }
 }

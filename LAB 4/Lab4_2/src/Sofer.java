@@ -9,4 +9,18 @@ public class Sofer{
         varsta = v;
         nrPermis = nr;
     }
+    public String getNume(){
+        return this.nume;
+    }
+
+    public String getPrenume() {
+        return prenume;
+    }
+
+//    public int getVarsta() {
+//        return varsta;
+//    }
+//    public int getNrPermis() {
+//        return nrPermis;
+//    }
 }
