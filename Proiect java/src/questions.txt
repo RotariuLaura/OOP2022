@@ -1,0 +1,6 @@
+(1) The method used to find the length of a string in Java? (a)getLength() (b)getSize() (c)length()
+(2) Which keyword is used to create a class in Java? (a)class (b)class() (c)className()
+(3) How do you insert comments in Java code? (a)/* (b)# (c)//
+(4) The data type used to create a variable that stores text? (a)Txt (b)String (c)char
+(5) Which operator can be used to compare two values? (a)== (b)= (c)<>
+
